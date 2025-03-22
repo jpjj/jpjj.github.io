@@ -13,23 +13,6 @@
 
 
 
-
-# Education
- - **M.S. Mathematics** TU Kaiserslautern (*December 2018*)
-    - Grade: **1,1 (very good)**
-    - Specialization: Optimization
-    - Minor: Computer Science
-    - Top Graded Master Thesis (1,0) Online Optimization: "Competitive Algorithms
-for operative Resource Planning"
-- **PROMOS scholarship** NUS Singapore (*August - December 2017*)
-  - DAAD-program at the **National University of Singapore**
-  - **Best in class** (took 5 courses, average final exam **grade: 1,1**)
-- **B.S. Mathematics TU Kaiserslautern** (*September 2016*)
-    - Grade: **1,1 (very good)**
-    - Specialisation: Optimization and Stochastics
-    - Minor: Computer Science
-    - Top Graded Master Thesis (1,0) "Preprocessing and Efficient Shortest Path Queries for Large Networks"
-
 # Work Experience
 
 ## Senior Data Scientist - Operations Research @ [DHL Data & Analytics GmbH](https://www.linkedin.com/company/dhl-data-analytics/posts/?feedView=all)
@@ -71,3 +54,20 @@ Git, Github, Gitlab, Jira, Confluence
 - **GenAI**: ChatGPT, Claude, Llama, Deep
 Seek, Github Copilot
 - [Certified Scrum Master](https://www.credly.com/badges/c6f39bb3-230f-41ed-81ed-21f94697fb3b?source=linked_in_profile)
+
+
+# Education
+ - **M.S. Mathematics** TU Kaiserslautern (*December 2018*)
+    - Grade: **1,1 (very good)**
+    - Specialization: Optimization
+    - Minor: Computer Science
+    - Top Graded Master Thesis (1,0) Online Optimization: "Competitive Algorithms
+for operative Resource Planning"
+- **PROMOS scholarship** NUS Singapore (*August - December 2017*)
+  - DAAD-program at the **National University of Singapore**
+  - **Best in class** (took 5 courses, average final exam **grade: 1,1**)
+- **B.S. Mathematics TU Kaiserslautern** (*September 2016*)
+    - Grade: **1,1 (very good)**
+    - Specialisation: Optimization and Stochastics
+    - Minor: Computer Science
+    - Top Graded Master Thesis (1,0) "Preprocessing and Efficient Shortest Path Queries for Large Networks"
