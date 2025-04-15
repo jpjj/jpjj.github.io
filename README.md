@@ -16,7 +16,7 @@
 # Work Experience
 
 ## Senior Data Scientist - Operations Research @ [DHL Data & Analytics GmbH](https://www.linkedin.com/company/dhl-data-analytics/posts/?feedView=all)
-### Jan 2023 - present
+### Jan 2023 - Apr 2025
 
 - Developing high-fidelity **simulation model** of a **$1B+ global air express network**, enabling **strategic planning**
 and operational optimization.
