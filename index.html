@@ -1,413 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jens-Peter Joost - AI Freelancer</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .hero-section {
-      position: relative;
-    }
-    .hero-section .scroll-arrow {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  </style>
+  <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body class="min-h-screen bg-gray-50 text-gray-800 font-sans">
-  <!-- Header -->
-  <header class="bg-white shadow-sm fixed w-full z-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
-        <div class="flex items-center">
-          <span class="text-xl font-bold text-blue-600">Jens-Peter Joost</span>
-        </div>
-        
-        <!-- Desktop nav -->
-        <nav class="hidden md:flex items-center space-x-8">
-          <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
-          <a href="#experience" class="text-gray-600 hover:text-blue-600 transition-colors">Experience</a>
-          <a href="#skills" class="text-gray-600 hover:text-blue-600 transition-colors">Skills</a>
-          <a href="#education" class="text-gray-600 hover:text-blue-600 transition-colors">Education</a>
-          <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
-        </nav>
-        
-        <!-- Mobile menu button -->
-        <div class="md:hidden flex items-center">
-          <button 
-            id="mobileMenuButton"
-            class="p-2 rounded-md text-gray-600 hover:text-blue-600 focus:outline-none"
-          >
-            <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="block"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
-            <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="#about" 
-           class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-gray-50 mobile-menu-link">
-          About
-        </a>
-        <a href="#experience" 
-           class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-gray-50 mobile-menu-link">
-          Experience
-        </a>
-        <a href="#skills" 
-           class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-gray-50 mobile-menu-link">
-          Skills
-        </a>
-        <a href="#education" 
-           class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-gray-50 mobile-menu-link">
-          Education
-        </a>
-        <a href="#contact" 
-           class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-gray-50 mobile-menu-link">
-          Contact
-        </a>
-      </div>
-    </div>
-  </header>
-<!-- Hero Section -->
-  <section class="hero-section pt-24 pb-12 md:pt-32 md:pb-20 bg-gradient-to-r from-blue-600 to-indigo-800 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="md:flex items-center">
-        <!-- Profile image for mobile - will only show on small screens -->
-        <div class="block md:hidden text-center mb-6">
-          <img 
-            src="/assets/headshot_circle.png" 
-            alt="Jens-Peter Joost" 
-            class="w-40 h-40 mx-auto rounded-full border-4 border-white shadow-lg"
-          />
-        </div>
-        
-        <div class="md:w-2/3">
-          <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-            Jens-Peter Joost
-          </h1>
-          <h2 class="text-xl md:text-2xl mt-4 font-light">
-            Data Scientist | AI Expert | Algorithm Engineer | Scrum Master
-          </h2>
-          <p class="mt-6 text-lg">
-            Developing tailored AI applications and providing expert consulting in logistics & manufacturing optimization
-          </p>
-          <div class="mt-8 flex space-x-4">
-            <a href="https://www.linkedin.com/in/jens-peter-joost/" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="flex items-center bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-blue-50 transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-              LinkedIn
-            </a>
-            <a href="mailto:jenspeter.joost@gmail.com?subject=AI%20Freelancing" 
-               class="flex items-center bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-blue-50 transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-              Email
-            </a>
-            <a href="#contact"
-               class="flex items-center bg-transparent text-white border border-white px-4 py-2 rounded-md hover:bg-white hover:text-blue-600 transition-colors">
-              Contact Me
-            </a>
-          </div>
-        </div>
-        
-        <!-- Profile image for desktop - will only show on medium screens and up -->
-        <div class="hidden md:block md:w-1/3">
-          <img 
-            src="/assets/headshot_circle.png" 
-            alt="Jens-Peter Joost" 
-            class="w-64 h-64 mx-auto rounded-full border-4 border-white shadow-lg"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="scroll-arrow flex justify-center">
-      <a href="#about" class="flex items-center text-white hover:text-blue-200 transition-colors pb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-      </a>
-    </div>
-  </section>
+  <div id="header"></div>
+  <div id="hero"></div>
+  <div id="about"></div>
+  <div id="experience"></div>
+  <div id="skills"></div>
+  <div id="education"></div>
+  <div id="contact"></div>
+  <div id="footer"></div>
 
-  <!-- About Section -->
-  <section id="about" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center mb-12">AI Freelancer Services</h2>
+  <script src="js/config.js"></script>
+  <script>
+    // Function to replace template variables
+    function replaceTemplateVariables(html, config) {
+      return html.replace(/\{\{([^}]+)\}\}/g, (match, path) => {
+        return path.split('.').reduce((obj, key) => obj && obj[key], config) || match;
+      });
+    }
+
+    // Function to load HTML components with config replacement
+    async function loadComponent(elementId, filePath) {
+      try {
+        const response = await fetch(filePath);
+        const html = await response.text();
+        const processedHtml = replaceTemplateVariables(html, CONFIG);
+        document.getElementById(elementId).innerHTML = processedHtml;
+      } catch (error) {
+        console.error(`Error loading ${filePath}:`, error);
+      }
+    }
+
+    // Load all components
+    async function loadAllComponents() {
+      await Promise.all([
+        loadComponent('header', 'components/header.html'),
+        loadComponent('hero', 'components/hero.html'),
+        loadComponent('about', 'components/about.html'),
+        loadComponent('experience', 'components/experience.html'),
+        loadComponent('skills', 'components/skills.html'),
+        loadComponent('education', 'components/education.html'),
+        loadComponent('contact', 'components/contact.html'),
+        loadComponent('footer', 'components/footer.html')
+      ]);
       
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold text-blue-600 mb-4">Development of Tailored AI Applications</h3>
-          <ul class="space-y-2">
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span><a href="https://jumper.streamlit.app" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Route planning</a> and network optimization</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span>Demand forecasting, GenAI & automated decision models</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span>Shift planning & workforce allocation</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span>Production processes & machine scheduling</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span>Performance optimization of existing systems</span>
-            </li>
-          </ul>
-        </div>
-        
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold text-blue-600 mb-4">Consulting & Training</h3>
-          <ul class="space-y-2">
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span>Advisory on AI-driven optimization solutions in logistics & manufacturing</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span>Corporate workshops: Introduction to AI & optimization algorithms</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+      // Load main JavaScript after components are loaded
+      const script = document.createElement('script');
+      script.src = 'js/main.js';
+      script.onload = function() {
+        // Initialize the app after main.js is loaded
+        if (typeof initializeApp === 'function') {
+          initializeApp();
+        }
+      };
+      document.body.appendChild(script);
+    }
 
-  <!-- Experience Section -->
-  <section id="experience" class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center mb-12">Work Experience</h2>
-      
-      <div class="space-y-12">
-        <div class="relative">
-          <!-- Timeline dot -->
-          <div class="hidden md:block absolute left-0 top-0 w-4 h-4 bg-blue-600 rounded-full"></div>
-          <!-- Timeline line -->
-          <div class="hidden md:block absolute left-2 top-4 bottom-0 w-0.5 bg-gray-300"></div>
-          
-          <div class="md:ml-12">
-            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
-              <h3 class="text-xl font-semibold">Senior Data Scientist - Operations Research</h3>
-              <div class="text-gray-600 mt-1 md:mt-0">
-                <a href="https://www.linkedin.com/company/dhl-data-analytics/posts/?feedView=all" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="text-blue-600 hover:underline">DHL Data & Analytics GmbH</a>
-              </div>
-            </div>
-            <p class="text-gray-600 mb-4">Jan 2023 - Apr 2025</p>
-            <ul class="space-y-2">
-              <li class="flex items-start">
-                <span class="text-blue-600 font-bold mr-2">•</span>
-                <span>Developing high-fidelity <strong>simulation model</strong> of a <strong>$1B+ global air express network</strong>, enabling <strong>strategic planning</strong> and operational optimization.</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 font-bold mr-2">•</span>
-                <span>Implementing <strong>GenAI</strong>-powered email categorization system, leveraging cutting-edge API to automate classification, <strong>improving</strong> number of correct classifications by <strong>29%</strong>, replacing previous vendor software.</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 font-bold mr-2">•</span>
-                <span>Collaborating with <strong>academia</strong> (RWTH Aachen) to work on <strong>state-of-the-art algorithms</strong> solving complex routing problems.</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 font-bold mr-2">•</span>
-                <span>Refactoring existing projects to increase performance using <strong>benchmarking, profiling, documentation</strong> and creating an infrastructure of <strong>automated testing</strong> on unit-, integration- and end-to-end test level.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="relative">
-          <!-- Timeline dot -->
-          <div class="hidden md:block absolute left-0 top-0 w-4 h-4 bg-blue-600 rounded-full"></div>
-          
-          <div class="md:ml-12">
-            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
-              <h3 class="text-xl font-semibold">Data Scientist - Operations Research</h3>
-              <div class="text-gray-600 mt-1 md:mt-0">DPDHL Group</div>
-            </div>
-            <p class="text-gray-600 mb-4">Apr 2019 – Dec 2022</p>
-            <ul class="space-y-2">
-              <li class="flex items-start">
-                <span class="text-blue-600 font-bold mr-2">•</span>
-                <span>Implementing <strong>machine learning</strong> and <strong>operations research</strong> models for routing and fleet management in last-mile delivery. Achieving <strong>8% cost reduction</strong> on <strong>last mile delivery</strong> for a big german automotive customer.</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 font-bold mr-2">•</span>
-                <span>Creating interactive <strong>user interfaces</strong> showcasing the solutions of <strong>vehicle routing</strong>- and <strong>3D truck loading algorithms</strong>.</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 font-bold mr-2">•</span>
-                <span>Designing and organizing group-wide data science <strong>networking</strong> and <strong>knowledge sharing</strong> events, using the organization chart as input data and applying <strong>graph algorithms</strong> for an <strong>optimal matching</strong> of employees.</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 font-bold mr-2">•</span>
-                <span>Engaging in <strong>agile project management</strong> in a diverse team of 6 developers consisting of data scientists, data- and software engineers and business stakeholders (method: <strong>SCRUM</strong>).</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', loadAllComponents);
+  </script>
+</body>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-lg font-semibold text-blue-600 mb-3">Programming Languages</h3>
-          <div class="space-y-2">
-            <div>
-              <span class="font-medium">Python:</span> numpy, pandas, tensorflow, polars, numba, cython, folium, sklearn, networkx, cProfile, snakeviz, pytest, matplotlib
-            </div>
-            <div>
-              <span class="font-medium">JavaScript:</span> leaflet, Threejs, react
-            </div>
-            <div>
-              <span class="font-medium">Rust:</span> polars, PyO3, ndarray, serde, rayon, rustworkx, petgraph
-            </div>
-          </div>
-        </div>
-        
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-lg font-semibold text-blue-600 mb-3">Tools & Software</h3>
-          <div class="space-y-2">
-            <div>
-              <span class="font-medium">Optimization software:</span> Cplex, Gurobi, HiGHs
-            </div>
-            <div>
-              <span class="font-medium">IDE software:</span> VSCode, PyCharm
-            </div>
-            <div>
-              <span class="font-medium">Version control & project management:</span> Git, Github, Gitlab, Jira, Confluence
-            </div>
-          </div>
-        </div>
-        
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-lg font-semibold text-blue-600 mb-3">AI & Project Management</h3>
-          <div class="space-y-2">
-            <div>
-              <span class="font-medium">GenAI:</span> ChatGPT, Claude, Llama, Deep Seek, Github Copilot
-            </div>
-            <div>
-              <a href="https://www.credly.com/badges/c6f39bb3-230f-41ed-81ed-21f94697fb3b?source=linked_in_profile" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 class="font-medium text-blue-600 hover:underline">Certified Scrum Master</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education" class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
-      
-      <div class="space-y-10">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold text-blue-600">M.S. Mathematics</h3>
-          <p class="text-gray-700 mt-1">TU Kaiserslautern (December 2018)</p>
-          <div class="mt-4 space-y-2">
-            <p><span class="font-medium">Grade:</span> 1,1 (very good)</p>
-            <p><span class="font-medium">Specialization:</span> Optimization</p>
-            <p><span class="font-medium">Minor:</span> Computer Science</p>
-            <p><span class="font-medium">Master Thesis:</span> Online Optimization: "Competitive Algorithms for operative Resource Planning" (Grade: 1,0)</p>
-          </div>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold text-blue-600">PROMOS scholarship</h3>
-          <p class="text-gray-700 mt-1">NUS Singapore (August - December 2017)</p>
-          <div class="mt-4 space-y-2">
-            <p>DAAD-program at the <strong>National University of Singapore</strong></p>
-            <p><strong>Best in class</strong> (took 5 courses, average final exam <strong>grade: 1,1</strong>)</p>
-          </div>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold text-blue-600">B.S. Mathematics</h3>
-          <p class="text-gray-700 mt-1">TU Kaiserslautern (September 2016)</p>
-          <div class="mt-4 space-y-2">
-            <p><span class="font-medium">Grade:</span> 1,1 (very good)</p>
-            <p><span class="font-medium">Specialization:</span> Optimization and Stochastics</p>
-            <p><span class="font-medium">Minor:</span> Computer Science</p>
-            <p><span class="font-medium">Bachelor Thesis:</span> "Preprocessing and Efficient Shortest Path Queries for Large Networks" (Grade: 1,0)</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-blue-600 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
-      <p class="text-xl mb-8">Interested in working together? Feel free to reach out!</p>
-      
-      <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-        <a href="https://www.linkedin.com/in/jens-peter-joost/" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           class="flex items-center justify-center bg-white text-blue-600 px-6 py-3 rounded-md hover:bg-blue-50 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          Connect on LinkedIn
-        </a>
-        <a href="mailto:jenspeter.joost@gmail.com?subject=AI%20Freelancing" 
-           class="flex items-center justify-center bg-white text-blue-600 px-6 py-3 rounded-md hover:bg-blue-50 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-          Send Email
-        </a>
-        <a href="https://github.com/jpjj" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           class="flex items-center justify-center bg-transparent text-white border border-white px-6 py-3 rounded-md hover:bg-white hover:text-blue-600 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-          GitHub
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="md:flex md:items-center md:justify-between">
-        <div class="text-center md:text-left mb-4 md:mb-0">
-          <p>&copy; <span id="current-year"></span> Jens-Peter Joost. All rights reserved.</p>
-        </div>
-        <div class="flex justify-center md:justify-end space-x-6">
-          <a href="https://www.linkedin.com/in/jens-peter-joost/" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             class="text-gray-400 hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          </a>
-          <a href="mailto:jenspeter.joost@gmail.com?subject=AI%20Freelancing" 
-             class="text-gray-400 hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-          </a>
-          <a href="https://github.com/jpjj" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             class="text-gray-400 hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a
+</html>

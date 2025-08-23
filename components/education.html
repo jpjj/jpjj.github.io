@@ -1,0 +1,38 @@
+<section id="education" class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
+
+    <div class="space-y-10">
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold text-blue-600">{{education.masters.degree}}</h3>
+        <p class="text-gray-700 mt-1">{{education.masters.institution}} ({{education.masters.date}})</p>
+        <div class="mt-4 space-y-2">
+          <p><span class="font-medium">Grade:</span> {{education.masters.grade}}</p>
+          <p><span class="font-medium">Specialization:</span> {{education.masters.specialization}}</p>
+          <p><span class="font-medium">Minor:</span> {{education.masters.minor}}</p>
+          <p><span class="font-medium">Master Thesis:</span> {{education.masters.thesis}}</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold text-blue-600">{{education.scholarship.program}}</h3>
+        <p class="text-gray-700 mt-1">{{education.scholarship.institution}} ({{education.scholarship.date}})</p>
+        <div class="mt-4 space-y-2">
+          <p>{{education.scholarship.description}}</p>
+          <p>{{education.scholarship.achievement}}</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold text-blue-600">{{education.bachelors.degree}}</h3>
+        <p class="text-gray-700 mt-1">{{education.bachelors.institution}} ({{education.bachelors.date}})</p>
+        <div class="mt-4 space-y-2">
+          <p><span class="font-medium">Grade:</span> {{education.bachelors.grade}}</p>
+          <p><span class="font-medium">Specialization:</span> {{education.bachelors.specialization}}</p>
+          <p><span class="font-medium">Minor:</span> {{education.bachelors.minor}}</p>
+          <p><span class="font-medium">Bachelor Thesis:</span> {{education.bachelors.thesis}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

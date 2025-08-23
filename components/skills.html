@@ -1,0 +1,50 @@
+<section id="skills" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-lg font-semibold text-blue-600 mb-3">Programming Languages</h3>
+        <div class="space-y-2">
+          <div>
+            <span class="font-medium">Python:</span> {{skills.programming.python}}
+          </div>
+          <div>
+            <span class="font-medium">JavaScript:</span> {{skills.programming.javascript}}
+          </div>
+          <div>
+            <span class="font-medium">Rust:</span> {{skills.programming.rust}}
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-lg font-semibold text-blue-600 mb-3">Tools & Software</h3>
+        <div class="space-y-2">
+          <div>
+            <span class="font-medium">Optimization software:</span> {{skills.tools.optimization}}
+          </div>
+          <div>
+            <span class="font-medium">IDE software:</span> {{skills.tools.ide}}
+          </div>
+          <div>
+            <span class="font-medium">Version control & project management:</span> {{skills.tools.versionControl}}
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-lg font-semibold text-blue-600 mb-3">AI & Project Management</h3>
+        <div class="space-y-2">
+          <div>
+            <span class="font-medium">GenAI:</span> {{skills.ai.genai}}
+          </div>
+          <div>
+            <a href="{{skills.ai.certification.url}}"
+              target="_blank" rel="noopener noreferrer" class="font-medium text-blue-600 hover:underline">{{skills.ai.certification.name}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
