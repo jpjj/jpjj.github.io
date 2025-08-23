@@ -1,38 +1,109 @@
+<!-- FAQ Section -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center mb-12">Häufige Fragen</h2>
+
+    <div class="space-y-6">
+      <!-- FAQ Item 1 -->
+      <div class="bg-white rounded-lg shadow-md">
+        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle">
+          <h3 class="text-lg font-semibold text-gray-900">{{faq.0.question}}</h3>
+          <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-content hidden px-6 pb-4">
+          <p class="text-gray-600">{{faq.0.answer}}</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="bg-white rounded-lg shadow-md">
+        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle">
+          <h3 class="text-lg font-semibold text-gray-900">{{faq.1.question}}</h3>
+          <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-content hidden px-6 pb-4">
+          <p class="text-gray-600">{{faq.1.answer}}</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="bg-white rounded-lg shadow-md">
+        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle">
+          <h3 class="text-lg font-semibold text-gray-900">{{faq.2.question}}</h3>
+          <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-content hidden px-6 pb-4">
+          <p class="text-gray-600">{{faq.2.answer}}</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="bg-white rounded-lg shadow-md">
+        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle">
+          <h3 class="text-lg font-semibold text-gray-900">{{faq.3.question}}</h3>
+          <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-content hidden px-6 pb-4">
+          <p class="text-gray-600">{{faq.3.answer}}</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="bg-white rounded-lg shadow-md">
+        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle">
+          <h3 class="text-lg font-semibold text-gray-900">{{faq.4.question}}</h3>
+          <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-content hidden px-6 pb-4">
+          <p class="text-gray-600">{{faq.4.answer}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
 <section id="contact" class="py-16 bg-blue-600 text-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
-    <p class="text-xl mb-8">Interested in working together? Feel free to reach out!</p>
+    <h2 class="text-3xl font-bold mb-6">Kontakt</h2>
+    <p class="text-xl mb-8">Bereit für Ihr KI-Projekt? Lassen Sie uns sprechen!</p>
 
     <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-      <a href="{{personal.linkedin}}" target="_blank" rel="noopener noreferrer"
-        class="flex items-center justify-center bg-white text-blue-600 px-6 py-3 rounded-md hover:bg-blue-50 transition-colors">
+      <a href="mailto:{{personal.email}}?subject=KI-Beratung%20Anfrage"
+        class="flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md hover:bg-blue-50 transition-colors font-semibold text-lg">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3">
+          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+        E-Mail senden
+      </a>
+      <a href="{{personal.linkedin}}" target="_blank" rel="noopener noreferrer"
+        class="flex items-center justify-center bg-transparent text-white border border-white px-8 py-4 rounded-md hover:bg-white hover:text-blue-600 transition-colors font-semibold text-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3">
           <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
           <rect x="2" y="9" width="4" height="12"></rect>
           <circle cx="4" cy="4" r="2"></circle>
         </svg>
-        Connect on LinkedIn
+        LinkedIn
       </a>
-      <a href="mailto:{{personal.email}}?subject=AI%20Freelancing"
-        class="flex items-center justify-center bg-white text-blue-600 px-6 py-3 rounded-md hover:bg-blue-50 transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-        </svg>
-        Send Email
-      </a>
-      <a href="{{personal.github}}" target="_blank" rel="noopener noreferrer"
-        class="flex items-center justify-center bg-transparent text-white border border-white px-6 py-3 rounded-md hover:bg-white hover:text-blue-600 transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-          <path
-            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-          </path>
-        </svg>
-        GitHub
-      </a>
+    </div>
+    
+    <div class="mt-12 text-center">
+      <p class="text-lg opacity-90">
+        <strong>Kostenloses Erstgespräch:</strong> Wir besprechen Ihre Herausforderungen und entwickeln gemeinsam eine Lösung.
+      </p>
     </div>
   </div>
 </section>

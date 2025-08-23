@@ -1,50 +1,84 @@
 <section id="skills" class="py-16 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
+    <h2 class="text-3xl font-bold text-center mb-12">Ausgewählte Projekte</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-        <h3 class="text-lg font-semibold text-blue-600 mb-3">Programming Languages</h3>
-        <div class="space-y-2">
-          <div>
-            <span class="font-medium">Python:</span> {{skills.programming.python}}
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Project 1 -->
+      <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+        <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+          <div class="text-white text-center">
+            <div class="text-4xl mb-2">🗺️</div>
+            <div class="text-sm opacity-90">Interactive Route Planning</div>
           </div>
-          <div>
-            <span class="font-medium">JavaScript:</span> {{skills.programming.javascript}}
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3">{{projects.0.title}}</h3>
+          <p class="text-gray-600 mb-4">{{projects.0.description}}</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">{{projects.0.technologies.0}}</span>
+            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">{{projects.0.technologies.1}}</span>
+            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">{{projects.0.technologies.2}}</span>
           </div>
-          <div>
-            <span class="font-medium">Rust:</span> {{skills.programming.rust}}
+          <a href="{{projects.0.url}}" target="_blank" rel="noopener noreferrer"
+             class="text-blue-600 hover:text-blue-800 font-semibold">
+            Projekt ansehen →
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+        <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+          <div class="text-white text-center">
+            <div class="text-4xl mb-2">📊</div>
+            <div class="text-sm opacity-90">Analytics Dashboard</div>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3">{{projects.1.title}}</h3>
+          <p class="text-gray-600 mb-4">{{projects.1.description}}</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">{{projects.1.technologies.0}}</span>
+            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">{{projects.1.technologies.1}}</span>
+            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">{{projects.1.technologies.2}}</span>
+          </div>
+          <div class="text-gray-500 font-semibold">
+            Vertrauliches Kundenprojekt
           </div>
         </div>
       </div>
 
-      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-        <h3 class="text-lg font-semibold text-blue-600 mb-3">Tools & Software</h3>
-        <div class="space-y-2">
-          <div>
-            <span class="font-medium">Optimization software:</span> {{skills.tools.optimization}}
+      <!-- Project 3 -->
+      <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+        <div class="h-48 bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center">
+          <div class="text-white text-center">
+            <div class="text-4xl mb-2">🏭</div>
+            <div class="text-sm opacity-90">Production AI System</div>
           </div>
-          <div>
-            <span class="font-medium">IDE software:</span> {{skills.tools.ide}}
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3">{{projects.2.title}}</h3>
+          <p class="text-gray-600 mb-4">{{projects.2.description}}</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">{{projects.2.technologies.0}}</span>
+            <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">{{projects.2.technologies.1}}</span>
+            <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">{{projects.2.technologies.2}}</span>
           </div>
-          <div>
-            <span class="font-medium">Version control & project management:</span> {{skills.tools.versionControl}}
+          <div class="text-gray-500 font-semibold">
+            Vertrauliches Kundenprojekt
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-        <h3 class="text-lg font-semibold text-blue-600 mb-3">AI & Project Management</h3>
-        <div class="space-y-2">
-          <div>
-            <span class="font-medium">GenAI:</span> {{skills.ai.genai}}
-          </div>
-          <div>
-            <a href="{{skills.ai.certification.url}}"
-              target="_blank" rel="noopener noreferrer" class="font-medium text-blue-600 hover:underline">{{skills.ai.certification.name}}</a>
-          </div>
-        </div>
-      </div>
+    <div class="text-center mt-12">
+      <p class="text-gray-600 text-lg mb-6">
+        Interessiert an einem ähnlichen Projekt? Lassen Sie uns über Ihre Anforderungen sprechen.
+      </p>
+      <a href="#contact" 
+         class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition-colors font-semibold">
+        Kostenloses Beratungsgespräch vereinbaren
+      </a>
     </div>
   </div>
 </section>

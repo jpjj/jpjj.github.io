@@ -1,86 +1,93 @@
 <section id="experience" class="py-16 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center mb-12">Work Experience</h2>
+    <h2 class="text-3xl font-bold text-center mb-12">Meine Dienstleistungen</h2>
 
-    <div class="space-y-12">
-      <div class="relative">
-        <!-- Timeline dot -->
-        <div class="hidden md:block absolute left-0 top-0 w-4 h-4 bg-blue-600 rounded-full"></div>
-        <!-- Timeline line -->
-        <div class="hidden md:block absolute left-2 top-4 bottom-0 w-0.5 bg-gray-300"></div>
-
-        <div class="md:ml-12">
-          <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
-            <h3 class="text-xl font-semibold">{{company.current.position}}</h3>
-            <div class="text-gray-600 mt-1 md:mt-0">
-              <a href="{{company.current.url}}" target="_blank"
-                rel="noopener noreferrer" class="text-blue-600 hover:underline">{{company.current.name}}</a>
-            </div>
-          </div>
-          <p class="text-gray-600 mb-4">{{company.current.duration}}</p>
-          <ul class="space-y-2">
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span>Developing high-fidelity <strong>simulation model</strong> of a <strong>$1B+ global air express
-                  network</strong>, enabling <strong>strategic planning</strong> and operational optimization.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span>Implementing <strong>GenAI</strong>-powered email categorization system, leveraging cutting-edge
-                API to automate classification, <strong>improving</strong> number of correct classifications by
-                <strong>29%</strong>, replacing previous vendor software.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span>Collaborating with <strong>academia</strong> (RWTH Aachen) to work on <strong>state-of-the-art
-                  algorithms</strong> solving complex routing problems.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span>Refactoring existing projects to increase performance using <strong>benchmarking, profiling,
-                  documentation</strong> and creating an infrastructure of <strong>automated testing</strong> on
-                unit-, integration- and end-to-end test level.</span>
-            </li>
-          </ul>
-        </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Service 1: KI-Strategieberatung -->
+      <div class="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+        <div class="text-4xl mb-4">{{services.strategy.icon}}</div>
+        <h3 class="text-xl font-bold mb-4">{{services.strategy.title}}</h3>
+        <p class="text-gray-600 mb-6">{{services.strategy.description}}</p>
+        <ul class="text-left space-y-3 mb-8">
+          <li class="flex items-start">
+            <span class="text-blue-600 font-bold mr-2">✓</span>
+            <span>{{services.strategy.features.0}}</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 font-bold mr-2">✓</span>
+            <span>{{services.strategy.features.1}}</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 font-bold mr-2">✓</span>
+            <span>{{services.strategy.features.2}}</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 font-bold mr-2">✓</span>
+            <span>{{services.strategy.features.3}}</span>
+          </li>
+        </ul>
+        <a href="#contact" 
+           class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors inline-block font-semibold">
+          Jetzt anfragen
+        </a>
       </div>
 
-      <div class="relative">
-        <!-- Timeline dot -->
-        <div class="hidden md:block absolute left-0 top-0 w-4 h-4 bg-blue-600 rounded-full"></div>
+      <!-- Service 2: Operations Research & Optimierung -->
+      <div class="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+        <div class="text-4xl mb-4">{{services.optimization.icon}}</div>
+        <h3 class="text-xl font-bold mb-4">{{services.optimization.title}}</h3>
+        <p class="text-gray-600 mb-6">{{services.optimization.description}}</p>
+        <ul class="text-left space-y-3 mb-8">
+          <li class="flex items-start">
+            <span class="text-blue-600 font-bold mr-2">✓</span>
+            <span>{{services.optimization.features.0}}</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 font-bold mr-2">✓</span>
+            <span>{{services.optimization.features.1}}</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 font-bold mr-2">✓</span>
+            <span>{{services.optimization.features.2}}</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 font-bold mr-2">✓</span>
+            <span>{{services.optimization.features.3}}</span>
+          </li>
+        </ul>
+        <a href="#contact" 
+           class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors inline-block font-semibold">
+          Jetzt anfragen
+        </a>
+      </div>
 
-        <div class="md:ml-12">
-          <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
-            <h3 class="text-xl font-semibold">{{company.previous.position}}</h3>
-            <div class="text-gray-600 mt-1 md:mt-0">{{company.previous.name}}</div>
-          </div>
-          <p class="text-gray-600 mb-4">{{company.previous.duration}}</p>
-          <ul class="space-y-2">
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span>Implementing <strong>machine learning</strong> and <strong>operations research</strong> models for
-                routing and fleet management in last-mile delivery. Achieving <strong>8% cost reduction</strong> on
-                <strong>last mile delivery</strong> for a big german automotive customer.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span>Creating interactive <strong>user interfaces</strong> showcasing the solutions of <strong>vehicle
-                  routing</strong>- and <strong>3D truck loading algorithms</strong>.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span>Designing and organizing group-wide data science <strong>networking</strong> and <strong>knowledge
-                  sharing</strong> events, using the organization chart as input data and applying <strong>graph
-                  algorithms</strong> for an <strong>optimal matching</strong> of employees.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-600 font-bold mr-2">•</span>
-              <span>Engaging in <strong>agile project management</strong> in a diverse team of 6 developers consisting
-                of data scientists, data- and software engineers and business stakeholders (method:
-                <strong>SCRUM</strong>).</span>
-            </li>
-          </ul>
-        </div>
+      <!-- Service 3: KI-Anwendungsentwicklung -->
+      <div class="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+        <div class="text-4xl mb-4">{{services.development.icon}}</div>
+        <h3 class="text-xl font-bold mb-4">{{services.development.title}}</h3>
+        <p class="text-gray-600 mb-6">{{services.development.description}}</p>
+        <ul class="text-left space-y-3 mb-8">
+          <li class="flex items-start">
+            <span class="text-blue-600 font-bold mr-2">✓</span>
+            <span>{{services.development.features.0}}</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 font-bold mr-2">✓</span>
+            <span>{{services.development.features.1}}</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 font-bold mr-2">✓</span>
+            <span>{{services.development.features.2}}</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 font-bold mr-2">✓</span>
+            <span>{{services.development.features.3}}</span>
+          </li>
+        </ul>
+        <a href="#contact" 
+           class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors inline-block font-semibold">
+          Jetzt anfragen
+        </a>
       </div>
     </div>
   </div>

@@ -15,9 +15,9 @@ function initializeMobileMenu() {
 
     if (mobileMenuButton && mobileMenu) {
         // Toggle mobile menu
-        mobileMenuButton.addEventListener('click', function() {
+        mobileMenuButton.addEventListener('click', function () {
             const isHidden = mobileMenu.classList.contains('hidden');
-            
+
             if (isHidden) {
                 mobileMenu.classList.remove('hidden');
                 menuIcon.classList.add('hidden');
@@ -31,7 +31,7 @@ function initializeMobileMenu() {
 
         // Close mobile menu when clicking on a link
         mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 mobileMenu.classList.add('hidden');
                 menuIcon.classList.remove('hidden');
                 closeIcon.classList.add('hidden');
@@ -46,7 +46,39 @@ function initializeMobileMenu() {
     }
 }
 
+// FAQ functionality
+function initializeFAQ() {
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+
+    faqToggles.forEach(toggle => {
+        toggle.addEventListener('click', function () {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector('.faq-icon');
+
+            // Close all other FAQ items
+            faqToggles.forEach(otherToggle => {
+                if (otherToggle !== this) {
+                    const otherContent = otherToggle.nextElementSibling;
+                    const otherIcon = otherToggle.querySelector('.faq-icon');
+                    otherContent.classList.add('hidden');
+                    otherIcon.classList.remove('rotate-180');
+                }
+            });
+
+            // Toggle current FAQ item
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        });
+    });
+}
+
 // Initialize everything after components and config are loaded
 function initializeApp() {
     initializeMobileMenu();
+    initializeFAQ();
 }
