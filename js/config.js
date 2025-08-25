@@ -276,7 +276,7 @@ Beyond his technical skills, Peter is a wonderful teammate. He shares knowledge 
 
   meta: {
     siteUrl: "https://jpjsolutions.com",
-    defaultImage: "/assets/JPJSolutionsSocialMediaPreview.svg",
+    defaultImage: "/assets/JPJSolutionsSocialMediaPreview.png",
     siteName: "JPJ Solutions",
     pages: {
       "index.html": {
