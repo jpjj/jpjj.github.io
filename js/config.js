@@ -7,11 +7,25 @@ const CONFIG = {
     heroHeadline: "Ihr Partner für KI-Lösungen",
     heroSubline: "Mathematiker - Data Scientist - KI-Experte. Ich entwickle maßgeschneiderte KI-Anwendungen für Logistik und Produktion",
     email: "jenspeter.joost@jpjsolutions.com",
+    phone: "+49 176 9588 1951",
     linkedin: "https://www.linkedin.com/in/jens-peter-joost/",
     github: "https://github.com/jpjj",
     calendly: "https://calendly.com/jenspeter-joost/30min",
     profileImage: "/assets/headshot_circle.png",
-    imageFull: "/assets/headshot_rectangle.jpg"
+    imageFull: "/assets/headshot_rectangle.jpg",
+    address: {
+      street: "Hittorfstraße 9",
+      postalCode: "50735",
+      city: "Köln",
+      country: "Deutschland"
+    }
+  },
+
+  legal: {
+    businessType: "Einzelunternehmer",
+    taxNumber: "205/5138/4114",
+    taxId: "67912054819",
+    vatId: "DE455046175"
   },
 
   company: {
@@ -166,11 +180,11 @@ const CONFIG = {
   faq: [
     {
       question: "Wie läuft die Zusammenarbeit ab?",
-      answer: "Wir starten mit einer kostenlosen Erstberatung, in der ich Ihre Anforderungen verstehe. Anschließend entwickle ich einen detaillierten Projektplan mit klaren Meilensteinen und Deliverables. Diesen raffinieren wir gemeinsam in einem Zweitgespräch."
+      answer: "Wir starten mit einer kostenlosen Erstberatung, in der ich Ihre Anforderungen verstehe. Anschließend entwicklen wir gemeinsam einen detaillierten Projektplan mit klaren Meilensteinen und Deliverables. Wenn der Projektplan bestätigt wurde, starten wir mit der Umsetzung.  Hier bei verwenden wir agiles Projekt Managment, d.h.: regelmäßiger Austausch, Vorstellung von Zwischenergebnissen und Umsetzung von Feedback."
     },
     {
       question: "Wie lange dauert ein Projekt?",
-      answer: "Das hängt vom Umfang ab. Einfache Analysen: 2-4 Wochen, komplexe KI-Anwendungen: 3-6 Monate. Ich arbeite agil mit regelmäßigen Updates."
+      answer: "Das hängt vom Umfang ab. Einfache Analysen: 2-4 Wochen, komplexe KI-Anwendungen: 3-6 Monate."
     },
     {
       question: "Was kostet eine KI-Lösung?",
@@ -182,7 +196,7 @@ const CONFIG = {
     },
     {
       question: "Viele Leute behaupten, sie seien KI-Experten. Was macht Sie anders?",
-      answer: "Ich kann über 6 Jahre Praxiserfahrung in der Entwicklung von KI-Modellen aufweisen. Mit einem Master in Mathematik verfüge ich über das technische Verständnis von KI Modellen. Ich habe bereits viele <a href='projekte.html' style='color: #007bff; text-decoration: underline; cursor: pointer;'>erfolgreiche Projekte</a> und <a href='referenzen.html' style='color: #007bff; text-decoration: underline; cursor: pointer;'>glückliche Kunden</a>. Überzeugen Sie sich selbst!"
+      answer: "Ich kann über 6 Jahre Praxiserfahrung in der Entwicklung von KI-Modellen aufweisen. Mit einem Master in Mathematik verfüge ich über das technische Verständnis und kann Ihnen nicht nur die Technik hinter der KI erklären, sondern maßschneidern. Ich habe bereits viele <a href='projekte.html' style='color: #007bff; text-decoration: underline; cursor: pointer;'>erfolgreiche Projekte</a> und <a href='referenzen.html' style='color: #007bff; text-decoration: underline; cursor: pointer;'>glückliche Kunden</a>. Überzeugen Sie sich selbst!"
     }
   ],
 
@@ -230,9 +244,9 @@ Beyond his technical skills, Peter is a wonderful teammate. He shares knowledge 
   ],
 
   navigation: {
-    about: "Über mich",
+    about: "About",
     projects: "Projekte",
     references: "Referenzen",
-    contact: "Kontakt"
+    contact: "Arbeitsweise"
   }
 };

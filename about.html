@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Über mich - Jens-Peter Joost | KI-Experte & Mathematiker</title>
+  <title>JPJ Solutions</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -15,41 +15,49 @@
   <!-- About Section -->
   <section class="py-16 bg-gray-50">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl font-bold text-center mb-12">Über mich</h1>
+      <h1 class="text-4xl font-bold text-center mb-12">Über JPJ Solutions</h1>
 
       <div class="md:flex items-start gap-12">
         <!-- Personal photo -->
         <div class="md:w-1/3 mb-8 md:mb-0 text-center">
-          <img src="{{personal.imageFull}}" alt="{{personal.name}}" class="" />
+          <img src="{{personal.imageFull}}" alt="{{personal.name}}" class="mb-6" />
+          <img src="/assets/banner_transparent.svg" alt="JPJ Solutions" class="h-15 mx-auto" />
         </div>
 
         <!-- Personal story -->
         <div class="md:w-2/3">
           <div class="prose prose-lg text-gray-700">
             <p class="mb-6">
-              Hallo! Ich bin <strong>Jens-Peter Joost</strong>, Mathematiker und Data Scientist mit einer Leidenschaft
-              für intelligente Optimierungslösungen. 6 Jahren entwicklte ich bei DHL innovative KI-Anwendungen,
-              die täglich Millionen von Sendungen effizienter machen.
+              Hallo! Ich bin <strong>Jens-Peter Joost</strong>, Mathematiker und Data Scientist mit einer klaren
+              Mission: <strong>Unternehmen dabei zu helfen, mit KI echten Geschäftswert zu schaffen</strong>, anstatt
+              nur dem neuesten Hype zu folgen.
             </p>
 
             <p class="mb-6">
-              Meine Reise begann mit einem Mathematikstudium an der TU Kaiserslautern, wo ich mich auf Optimierung
-              spezialisierte. Was als akademisches Interesse begann, wurde schnell zu meiner beruflichen Mission:
-              <strong>komplexe Geschäftsprobleme durch intelligente Algorithmen zu lösen</strong>.
+              Als studierter Mathematiker entwickelte ich 6 Jahre lang bei DHL innovative KI-Anwendungen, die täglich
+              Millionen von
+              Sendungen effizienter machen – von einem <strong>$1B+ Simulationsmodell des globalen
+                Luftfrachtnetzwerks</strong> bis hin zu <strong>GenAI-Systemen, die Klassifizierungsgenauigkeit um 29%
+                verbessern</strong>.
             </p>
 
             <p class="mb-6">
-              Bei DHL durfte ich an faszinierenden Projekten arbeiten – von der Entwicklung eines <strong>$1B+
-                Simulationsmodells des globalen Luftfrachtnetzwerks</strong> bis hin zu GenAI-powered Systemen, die die
-              Klassifizierungsgenauigkeit um 29% verbessern. Diese Erfahrungen haben mir gezeigt, wie KI echten
-              Geschäftswert schaffen kann.
+              Diese Erfahrungen zeigten mir ein Problem: <strong>Viele Unternehmen investieren Millionen in KI-Projekte,
+                die nie echte Ergebnisse liefern</strong>. Zu oft werden technische Lösungen gebaut, die am
+              Geschäftswert vorbeigehen. Zu oft werden Marketing-Buzzwords wichtiger als messbare Resultate.
             </p>
 
             <p class="mb-6">
-              Heute helfe ich Unternehmen dabei, das volle Potenzial von KI und Optimierung auszuschöpfen. Ob
-              Routenplanung, Produktionsoptimierung oder strategische KI-Beratung – ich bringe <strong>mathematische
-                Präzision und praktische Geschäftserfahrung</strong> zusammen, um Lösungen zu schaffen, die wirklich
-              funktionieren.
+              Deshalb gründete ich <strong>JPJ Solutions</strong> – um diese Lücke zu schließen. Ich
+              bringe <strong>mathematische Präzision und bewährte Geschäftserfahrung</strong> zusammen, um KI-Lösungen
+              zu schaffen, die wirklich funktionieren und messbare Kosteneinsparungen sowie Effizienzsteigerungen
+              liefern.
+            </p>
+
+            <p class="mb-6">
+              Ob Routenplanung, Produktionsoptimierung oder strategische KI-Beratung – mein Fokus liegt darauf,
+              <strong>komplexe Geschäftsprobleme durch intelligente Algorithmen zu lösen</strong> und dabei transparent
+              aufzuzeigen, welchen konkreten Nutzen jede Investition bringt.
             </p>
 
 
@@ -81,63 +89,8 @@
       </div>
     </div>
   </section>
-
-
-
-  <!-- Technical Skills Section -->
-  <section class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center mb-12">Technische Fähigkeiten</h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-lg font-semibold text-blue-600 mb-3">Programmiersprachen</h3>
-          <div class="space-y-2">
-            <div>
-              <span class="font-medium">Python:</span> {{skills.programming.python}}
-            </div>
-            <div>
-              <span class="font-medium">JavaScript:</span> {{skills.programming.javascript}}
-            </div>
-            <div>
-              <span class="font-medium">Rust:</span> {{skills.programming.rust}}
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-lg font-semibold text-blue-600 mb-3">Tools & Software</h3>
-          <div class="space-y-2">
-            <div>
-              <span class="font-medium">Optimierungssoftware:</span> {{skills.tools.optimization}}
-            </div>
-            <div>
-              <span class="font-medium">IDE-Software:</span> {{skills.tools.ide}}
-            </div>
-            <div>
-              <span class="font-medium">Versionskontrolle & Projektmanagement:</span> {{skills.tools.versionControl}}
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-lg font-semibold text-blue-600 mb-3">KI & Projektmanagement</h3>
-          <div class="space-y-2">
-            <div>
-              <span class="font-medium">GenAI:</span> {{skills.ai.genai}}
-            </div>
-            <div>
-              <a href="{{skills.ai.certification.url}}" target="_blank" rel="noopener noreferrer"
-                class="font-medium text-blue-600 hover:underline">{{skills.ai.certification.name}}</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <div id="trust-builder"></div>
   <div id="cta"></div>
-
   <div id="footer"></div>
 
   <script src="js/config.js"></script>
@@ -172,17 +125,24 @@
       });
     }
 
-    // Load components
+    // Auto-detect and load components
     async function loadAllComponents() {
       // First process the page content
       processPageContent();
 
-      // Then load components
-      await Promise.all([
-        loadComponent('header', 'components/header.html'),
-        loadComponent('cta', 'components/cta.html'),
-        loadComponent('footer', 'components/footer.html')
-      ]);
+      // Auto-detect component divs and load them
+      const componentDivs = document.querySelectorAll('[id]');
+      const loadPromises = [];
+      
+      componentDivs.forEach(div => {
+        const componentId = div.id;
+        // Skip non-component divs
+        if (['header', 'footer', 'cta', 'trust-builder', 'hero', 'pain-point', 'experience'].includes(componentId)) {
+          loadPromises.push(loadComponent(componentId, `components/${componentId}.html`));
+        }
+      });
+
+      await Promise.all(loadPromises);
 
       // Load main JavaScript after components are loaded
       const script = document.createElement('script');

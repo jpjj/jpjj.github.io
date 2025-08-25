@@ -12,7 +12,9 @@
 <body class="min-h-screen bg-gray-50 text-gray-800 font-sans has-fixed-header">
   <div id="header"></div>
   <div id="pain-point"></div>
+  <!-- Part 3: Call to Action -->
   <div id="hero"></div>
+  <div id="trust-builder"></div>
   <!-- <div id="experience"></div> -->
   <div id="footer"></div>
 
@@ -37,16 +39,21 @@
       }
     }
 
-    // Load all components
+    // Auto-detect and load components
     async function loadAllComponents() {
-      await Promise.all([
-        loadComponent('header', 'components/header.html'),
-        loadComponent('pain-point', 'components/pain-point.html'),
-        loadComponent('hero', 'components/hero.html'),
-        loadComponent('experience', 'components/experience.html'),
-        loadComponent('experience', 'components/experience.html'),
-        loadComponent('footer', 'components/footer.html')
-      ]);
+      // Auto-detect component divs and load them
+      const componentDivs = document.querySelectorAll('[id]');
+      const loadPromises = [];
+
+      componentDivs.forEach(div => {
+        const componentId = div.id;
+        // Skip non-component divs
+        if (['header', 'footer', 'cta', 'trust-builder', 'hero', 'pain-point', 'experience'].includes(componentId)) {
+          loadPromises.push(loadComponent(componentId, `components/${componentId}.html`));
+        }
+      });
+
+      await Promise.all(loadPromises);
 
       // Load main JavaScript after components are loaded
       const script = document.createElement('script');

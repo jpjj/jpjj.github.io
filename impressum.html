@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum - JPJ Solutions</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-gray-50 text-gray-800 font-sans has-fixed-header">
+  <div id="header"></div>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-bold text-center mb-12">Impressum</h1>
+
+      <div class="bg-white p-8 rounded-lg shadow-md">
+        <div class="prose prose-lg text-gray-700 max-w-none">
+          <h2 class="text-2xl font-bold mb-4">Angaben gemäß § 5 TMG</h2>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-3">Diensteanbieter</h3>
+            <p>
+              <strong>{{personal.name}}</strong><br>
+              {{legal.businessType}}<br>
+              JPJ Solutions<br>
+              {{personal.address.street}}<br>
+              {{personal.address.postalCode}} {{personal.address.city}}<br>
+              {{personal.address.country}}
+            </p>
+          </div>
+
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-3">Kontaktaufnahme</h3>
+            <p>
+              <strong>Telefon:</strong> {{personal.phone}}<br>
+              <strong>E-Mail:</strong> {{personal.email}}
+            </p>
+          </div>
+
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-3">Steuerliche Angaben</h3>
+            <p>
+              <strong>Steuernummer:</strong> {{legal.taxNumber}}<br>
+              <strong>Umsatzsteuer-Identifikationsnummer:</strong> {{legal.vatId}}
+            </p>
+          </div>
+
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-3">Aufsichtsbehörde</h3>
+            <p>
+              Als freiberuflicher Einzelunternehmer unterliege ich keiner besonderen Aufsichtsbehörde.
+            </p>
+          </div>
+
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-3">Haftungsausschluss</h3>
+            <h4 class="text-lg font-semibold mb-2">Inhalte</h4>
+            <p class="mb-4">
+              Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+            </p>
+            
+            <h4 class="text-lg font-semibold mb-2">Links</h4>
+            <p class="mb-4">
+              Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+            </p>
+            
+            <h4 class="text-lg font-semibold mb-2">Urheberrecht</h4>
+            <p>
+              Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/config.js"></script>
+  <script>
+    // Function to replace template variables
+    function replaceTemplateVariables(html, config) {
+      return html.replace(/\{\{([^}]+)\}\}/g, (match, path) => {
+        return path.split('.').reduce((obj, key) => obj && obj[key], config) || match;
+      });
+    }
+
+    // Function to load HTML components with config replacement
+    async function loadComponent(elementId, filePath) {
+      try {
+        const response = await fetch(filePath);
+        const html = await response.text();
+        const processedHtml = replaceTemplateVariables(html, CONFIG);
+        document.getElementById(elementId).innerHTML = processedHtml;
+      } catch (error) {
+        console.error(`Error loading ${filePath}:`, error);
+      }
+    }
+
+    // Process template variables in specific elements
+    function processPageContent() {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        const content = section.innerHTML;
+        const processedContent = replaceTemplateVariables(content, CONFIG);
+        section.innerHTML = processedContent;
+      });
+    }
+
+    // Auto-detect and load components
+    async function loadAllComponents() {
+      processPageContent();
+
+      const componentDivs = document.querySelectorAll('[id]');
+      const loadPromises = [];
+      
+      componentDivs.forEach(div => {
+        const componentId = div.id;
+        if (['header', 'footer', 'cta', 'trust-builder', 'hero', 'pain-point', 'experience'].includes(componentId)) {
+          loadPromises.push(loadComponent(componentId, `components/${componentId}.html`));
+        }
+      });
+
+      await Promise.all(loadPromises);
+
+      const script = document.createElement('script');
+      script.src = 'js/main.js';
+      script.onload = function () {
+        if (typeof initializeApp === 'function') {
+          initializeApp();
+        }
+      };
+      document.body.appendChild(script);
+    }
+
+    document.addEventListener('DOMContentLoaded', loadAllComponents);
+  </script>
+</body>
+
+</html>
