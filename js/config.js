@@ -2,24 +2,32 @@
 const CONFIG = {
   personal: {
     name: "Jens-Peter Joost",
-    title: "Mathematiker & Data Scientist | KI-Experte",
+    title: "Mathematiker | Data Scientist | KI-Experte",
     description: "Maßgeschneiderte KI-Anwendungen für Logistik und Produktion",
-    heroHeadline: "Ihr Partner für KI-Lösungen 🤖",
-    heroSubline: "Als Mathematiker und Data Scientist entwickle ich maßgeschneiderte KI-Anwendungen für Logistik und Produktion",
-    email: "jenspeter.joost@gmail.com",
+    heroHeadline: "Ihr Partner für KI-Lösungen",
+    heroSubline: "Mathematiker - Data Scientist - KI-Experte. Ich entwickle maßgeschneiderte KI-Anwendungen für Logistik und Produktion",
+    email: "jenspeter.joost@jpjsolutions.com",
     linkedin: "https://www.linkedin.com/in/jens-peter-joost/",
     github: "https://github.com/jpjj",
-    profileImage: "/assets/headshot_circle.png"
+    calendly: "https://calendly.com/jenspeter-joost/30min",
+    profileImage: "/assets/headshot_circle.png",
+    imageFull: "/assets/headshot_rectangle.jpg"
   },
 
   company: {
     current: {
+      name: "JPJ Solutions",
+      url: "https://www.jpjsolutions.com",
+      position: "AI Partner",
+      duration: "Apr 2025"
+    },
+    previous1: {
       name: "DHL Data & Analytics GmbH",
       url: "https://www.linkedin.com/company/dhl-data-analytics/posts/?feedView=all",
       position: "Senior Data Scientist - Operations Research",
       duration: "Jan 2023 - Apr 2025"
     },
-    previous: {
+    previous2: {
       name: "DPDHL Group",
       position: "Data Scientist - Operations Research",
       duration: "Apr 2019 – Dec 2022"
@@ -129,7 +137,7 @@ const CONFIG = {
       title: "Production Optimization",
       description: "KI-basierte Produktionsplanung für Fertigungsunternehmen",
       url: "#",
-      image: "/assets/project-production.png", 
+      image: "/assets/project-production.png",
       technologies: ["Operations Research", "AI", "Process Optimization"]
     }
   ],
@@ -158,11 +166,7 @@ const CONFIG = {
   faq: [
     {
       question: "Wie läuft die Zusammenarbeit ab?",
-      answer: "Wir starten mit einer kostenlosen Erstberatung, in der ich Ihre Anforderungen verstehe. Anschließend entwickle ich einen detaillierten Projektplan mit klaren Meilensteinen und Deliverables."
-    },
-    {
-      question: "Welche Technologien verwenden Sie?",
-      answer: "Ich arbeite hauptsächlich mit Python (TensorFlow, scikit-learn, pandas), JavaScript für Webinterfaces und professionellen Optimierungstools wie CPLEX und Gurobi."
+      answer: "Wir starten mit einer kostenlosen Erstberatung, in der ich Ihre Anforderungen verstehe. Anschließend entwickle ich einen detaillierten Projektplan mit klaren Meilensteinen und Deliverables. Diesen raffinieren wir gemeinsam in einem Zweitgespräch."
     },
     {
       question: "Wie lange dauert ein Projekt?",
@@ -170,17 +174,65 @@ const CONFIG = {
     },
     {
       question: "Was kostet eine KI-Lösung?",
-      answer: "Die Kosten variieren je nach Komplexität. Nach der Erstberatung erhalten Sie ein transparentes Angebot. Kleine Projekte starten ab 5.000€, größere Entwicklungen nach Aufwand."
+      answer: "Die Kosten variieren je nach Komplexität. Nach der Erstberatung erhalten Sie im Zweitgespräch ein transparentes Angebot."
     },
     {
       question: "Bieten Sie auch Support nach Projektende?",
       answer: "Ja, ich biete verschiedene Support-Pakete für Wartung, Updates und Erweiterungen Ihrer KI-Lösung an."
+    },
+    {
+      question: "Viele Leute behaupten, sie seien KI-Experten. Was macht Sie anders?",
+      answer: "Ich kann über 6 Jahre Praxiserfahrung in der Entwicklung von KI-Modellen aufweisen. Mit einem Master in Mathematik verfüge ich über das technische Verständnis von KI Modellen. Ich habe bereits viele <a href='projekte.html' style='color: #007bff; text-decoration: underline; cursor: pointer;'>erfolgreiche Projekte</a> und <a href='referenzen.html' style='color: #007bff; text-decoration: underline; cursor: pointer;'>glückliche Kunden</a>. Überzeugen Sie sich selbst!"
+    }
+  ],
+
+  testimonials: [
+    {
+      author: "Lutz Venhofen",
+      jobTitle: "Senior Data Scientist",
+      company: "Redcare Pharmacy GmbH",
+      text: "Peter and I have closely cooperated for multiple years on multiple projects. I had the opportunity to witness both his ability to understand, develop and implement ML and OR solutions to complex business problems, as well as connect with business partners, understand their needs, take feedback from them and explain technical solutions. In short Peter is the one-stop-shop to understand and solve problems with AI and mathematical optimization. And he is just a great human being to be around and to work with.He shares freely his compassion, empathy and positive attitude.And if it gets tough he shows grit and determination.If I will have the chance to work with him again, I'll gladly do it!",
+      profilePicture: "/assets/testimonials/lutz.png"
+    },
+    {
+      author: "Henning Blunck",
+      jobTitle: "Head of Routing & Operations Research",
+      company: "DHL Data & Analytics",
+      text: `It has been a joy working with Peter!
+
+Peter is not just an outstanding programmer with great experience in algorithmic optimization and GenAI applications, but most importantly driven by the impact he can make on processes and systems. While working in my department, he has gone to great length to understand business processes, talk to stakeholders on both working- and management level and try to dial in his solution exactly on their needs.
+
+His broad expertise allows him to both quickly design Proof-of-Concept implementations as well as drive the development of industry-grade, deployed analytics applications.
+
+He is also a great teamplayer also to his colleagues and project members.`,
+      profilePicture: "/assets/testimonials/henning.png"
+    },
+    {
+      author: "Matteo Biggio",
+      jobTitle: "Software Engineer",
+      company: "DHL Data & Analytics",
+      text: `Peter is a highly skilled data scientist and operations research expert.
+
+He combines deep technical knowledge with a practical, solution-oriented mindset, delivering results that drive real business value to the customer. 
+
+Peter is also a very skilled and passionate software engineer and software architect. I was very impressed by how he quickly became proficient in the Rust programming language, and by the soundness of the software he designed.
+
+Beyond his technical skills, Peter is a wonderful teammate. He shares knowledge freely, and is always open to feedback and new ideas. His positive energy and professionalism make him a pleasure to work with.`,
+      profilePicture: "/assets/testimonials/matteo.png"
+    },
+    {
+      author: "Uğur Arikan",
+      jobTitle: "Prinicipal Operations Research Scientist",
+      company: "DHL Data & Analytics",
+      text: `Peter is a highly motivated Operations Research practitioner with a strong background in algorithms, problem modeling & solving and great energy to learn more to always keep up with state of the art. He approaches the problem as a whole which let him become versatile going beyond the maths, and designing data flow, processes and user interfaces. Last but not least, he is a great teammate and it is joy to work with him.`,
+      profilePicture: "/assets/testimonials/ugur.png"
     }
   ],
 
   navigation: {
     about: "Über mich",
-    references: "Referenzen", 
+    projects: "Projekte",
+    references: "Referenzen",
     contact: "Kontakt"
   }
 };

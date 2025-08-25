@@ -12,3 +12,17 @@ html {
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* Ensure header sticks properly */
+header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 50 !important;
+}
+
+/* Add space for fixed header */
+body.has-fixed-header {
+  padding-top: 64px;
+}
