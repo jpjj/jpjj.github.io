@@ -220,7 +220,7 @@ const CONFIG = {
     },
     {
       question: "Viele Leute behaupten, sie seien KI-Experten. Was macht Sie anders?",
-      answer: "Ich kann über 6 Jahre Praxiserfahrung in der Entwicklung von KI-Modellen aufweisen. Mit einem Master in Mathematik verfüge ich über das technische Verständnis und kann Ihnen nicht nur die Technik hinter der KI erklären, sondern maßschneidern. Ich habe bereits viele <a href='projekte.html' style='color: #007bff; text-decoration: underline; cursor: pointer;'>erfolgreiche Projekte</a> und <a href='referenzen.html' style='color: #007bff; text-decoration: underline; cursor: pointer;'>glückliche Kunden</a>. Überzeugen Sie sich selbst!"
+      answer: "Ich kann über 6 Jahre Praxiserfahrung in der Entwicklung von KI-Modellen aufweisen. Mit einem Master in Mathematik verfüge ich über das technische Verständnis und kann Ihnen nicht nur die Technik hinter der KI erklären, sondern maßschneidern. Ich habe bereits viele <a href='#projekte-section' style='color: #007bff; text-decoration: underline; cursor: pointer;'>erfolgreiche Projekte</a> und <a href='#referenzen-section' style='color: #007bff; text-decoration: underline; cursor: pointer;'>glückliche Kunden</a>. Überzeugen Sie sich selbst!"
     }
   ],
 

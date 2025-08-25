@@ -98,7 +98,6 @@
   <div id="cta"></div>
   <div id="footer"></div>
 
-  <script src="js/config.js"></script>
   <script>
     // Function to replace template variables
     function replaceTemplateVariables(html, config) {
@@ -148,6 +147,7 @@
       });
 
       await Promise.all(loadPromises);
+
 
       // Load main JavaScript after components are loaded
       const script = document.createElement('script');

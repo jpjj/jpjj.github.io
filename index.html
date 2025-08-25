@@ -5,22 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jens-Peter Joost - KI-Experte | Mathematiker | Data Scientist</title>
-  <meta name="description" content="Professionelle KI-Beratung und maßgeschneiderte Lösungen für Ihr Unternehmen. Expertise in GenAI, Machine Learning und Prozessoptimierung.">
-  
+  <meta name="description"
+    content="Professionelle KI-Beratung und maßgeschneiderte Lösungen für Ihr Unternehmen. Expertise in GenAI, Machine Learning und Prozessoptimierung.">
+
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Jens-Peter Joost - KI-Experte | Mathematiker | Data Scientist">
-  <meta property="og:description" content="Professionelle KI-Beratung und maßgeschneiderte Lösungen für Ihr Unternehmen. Expertise in GenAI, Machine Learning und Prozessoptimierung.">
+  <meta property="og:description"
+    content="Professionelle KI-Beratung und maßgeschneiderte Lösungen für Ihr Unternehmen. Expertise in GenAI, Machine Learning und Prozessoptimierung.">
   <meta property="og:image" content="https://jpjsolutions.com/assets/JPJSolutionsSocialMediaPreview.png">
   <meta property="og:url" content="https://jpjsolutions.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="JPJ Solutions">
-  
+
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Jens-Peter Joost - KI-Experte | Mathematiker | Data Scientist">
-  <meta name="twitter:description" content="Professionelle KI-Beratung und maßgeschneiderte Lösungen für Ihr Unternehmen. Expertise in GenAI, Machine Learning und Prozessoptimierung.">
+  <meta name="twitter:description"
+    content="Professionelle KI-Beratung und maßgeschneiderte Lösungen für Ihr Unternehmen. Expertise in GenAI, Machine Learning und Prozessoptimierung.">
   <meta name="twitter:image" content="https://jpjsolutions.com/assets/JPJSolutionsSocialMediaPreview.png">
-  
+
   <link rel="icon" type="image/svg+xml" href="assets/logo_only.svg">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
@@ -34,10 +37,13 @@
   <!-- Part 3: Call to Action -->
   <div id="hero"></div>
   <div id="trust-builder"></div>
+  <div id="projekte"></div>
+  <div id="referenzen"></div>
+  <div id="zusammenarbeit"></div>
+  <div id="cta"></div>
   <!-- <div id="experience"></div> -->
   <div id="footer"></div>
 
-  <script src="js/config.js"></script>
   <script>
     // Function to replace template variables
     function replaceTemplateVariables(html, config) {
@@ -67,12 +73,53 @@
       componentDivs.forEach(div => {
         const componentId = div.id;
         // Skip non-component divs
-        if (['header', 'footer', 'cta', 'trust-builder', 'hero', 'pain-point', 'experience'].includes(componentId)) {
+        if (['header', 'footer', 'cta', 'trust-builder', 'hero', 'pain-point', 'experience', 'projekte', 'referenzen', 'zusammenarbeit'].includes(componentId)) {
           loadPromises.push(loadComponent(componentId, `components/${componentId}.html`));
         }
       });
 
       await Promise.all(loadPromises);
+
+      // Handle anchor navigation on page load
+      if (window.location.hash) {
+        setTimeout(() => {
+          const targetId = window.location.hash.substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            const headerHeight = 80;
+            const targetPosition = targetElement.offsetTop - headerHeight;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }, 100); // Small delay to ensure components are fully rendered
+      }
+
+      // Add smooth scrolling functionality
+      document.querySelectorAll('.scroll-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            const headerHeight = 80; // Account for fixed header
+            const targetPosition = targetElement.offsetTop - headerHeight;
+
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+              mobileMenu.classList.add('hidden');
+            }
+          }
+        });
+      });
 
       // Load main JavaScript after components are loaded
       const script = document.createElement('script');
@@ -81,6 +128,15 @@
         // Initialize the app after main.js is loaded
         if (typeof initializeApp === 'function') {
           initializeApp();
+          // Ensure FAQ is rendered after all components are loaded
+          setTimeout(() => {
+            if (typeof renderFAQ === 'function') {
+              renderFAQ();
+            }
+            if (typeof initializeFAQ === 'function') {
+              initializeFAQ();
+            }
+          }, 50);
         }
       };
       document.body.appendChild(script);
