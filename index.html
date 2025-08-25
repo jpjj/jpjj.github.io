@@ -9,8 +9,9 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="min-h-screen bg-gray-50 text-gray-800 font-sans">
+<body class="min-h-screen bg-gray-50 text-gray-800 font-sans has-fixed-header">
   <div id="header"></div>
+  <div id="pain-point"></div>
   <div id="hero"></div>
   <!-- <div id="experience"></div> -->
   <div id="footer"></div>
@@ -40,6 +41,7 @@
     async function loadAllComponents() {
       await Promise.all([
         loadComponent('header', 'components/header.html'),
+        loadComponent('pain-point', 'components/pain-point.html'),
         loadComponent('hero', 'components/hero.html'),
         loadComponent('experience', 'components/experience.html'),
         loadComponent('experience', 'components/experience.html'),
