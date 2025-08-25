@@ -272,5 +272,41 @@ Beyond his technical skills, Peter is a wonderful teammate. He shares knowledge 
     projects: "Projekte",
     references: "Referenzen",
     contact: "Arbeitsweise"
+  },
+
+  meta: {
+    siteUrl: "https://jpjsolutions.com",
+    defaultImage: "/assets/JPJSolutionsSocialMediaPreview.svg",
+    siteName: "JPJ Solutions",
+    pages: {
+      "index.html": {
+        title: "Jens-Peter Joost - KI-Experte | Mathematiker | Data Scientist",
+        description: "Professionelle KI-Beratung und maßgeschneiderte Lösungen für Ihr Unternehmen. Expertise in GenAI, Machine Learning und Prozessoptimierung."
+      },
+      "zusammenarbeit.html": {
+        title: "Kontakt - JPJ Solutions | KI-Beratung anfragen",
+        description: "Starten Sie Ihr KI-Projekt mit einem kostenlosen Erstgespräch. Erfahren Sie mehr über unseren Projektablauf und Technologien."
+      },
+      "projekte.html": {
+        title: "Projekte - Jens-Peter Joost | KI-Projekte & Anwendungen",
+        description: "Entdecken Sie unsere erfolgreichen KI-Projekte: E-Mail-Klassifizierung, ETA-Vorhersage, Matching-Plattformen und Optimierungslösungen."
+      },
+      "referenzen.html": {
+        title: "Referenzen - Jens-Peter Joost | Kundenstimmen & Bewertungen",
+        description: "Lesen Sie Erfahrungsberichte zufriedener Kunden über unsere KI-Lösungen und Optimierungsprojekte."
+      },
+      "about.html": {
+        title: "Über mich - Jens-Peter Joost | KI-Experte & Mathematiker",
+        description: "Erfahren Sie mehr über meinen Hintergrund als Mathematiker, Data Scientist und KI-Experte mit über 6 Jahren Praxiserfahrung."
+      },
+      "impressum.html": {
+        title: "Impressum - JPJ Solutions",
+        description: "Rechtliche Angaben und Kontaktinformationen zu JPJ Solutions."
+      },
+      "datenschutz.html": {
+        title: "Datenschutzerklärung - JPJ Solutions",
+        description: "Datenschutzerklärung und Informationen zum Umgang mit personenbezogenen Daten bei JPJ Solutions."
+      }
+    }
   }
 };
