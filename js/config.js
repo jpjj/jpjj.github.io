@@ -180,7 +180,7 @@ const CONFIG = {
   faq: [
     {
       question: "Wie läuft die Zusammenarbeit ab?",
-      answer: "Wir starten mit einer kostenlosen Erstberatung, in der ich Ihre Anforderungen verstehe. Anschließend entwicklen wir gemeinsam einen detaillierten Projektplan mit klaren Meilensteinen und Deliverables. Wenn der Projektplan bestätigt wurde, starten wir mit der Umsetzung.  Hier bei verwenden wir agiles Projekt Managment, d.h.: regelmäßiger Austausch, Vorstellung von Zwischenergebnissen und Umsetzung von Feedback."
+      answer: "Wir starten mit einer kostenlosen Erstberatung, in der ich Ihre Anforderungen verstehe. Anschließend entwicklen wir gemeinsam einen detaillierten Projektplan mit klaren Meilensteinen und Deliverables. Anschließend starten wir mit der Umsetzung.  Hierbei verwenden wir agiles Projekt Management, d.h.: regelmäßiger Austausch, Vorstellung von Zwischenergebnissen und Umsetzung von Feedback."
     },
     {
       question: "Wie lange dauert ein Projekt?",
