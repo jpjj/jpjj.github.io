@@ -18,76 +18,11 @@
       <h1 class="text-4xl font-bold text-center mb-12">Ausgewählte Projekte</h1>
 
       <div class="text-center mb-12">
-        <p class="text-xl text-gray-600">Einblicke in meine KI- und Optimierungsprojekte</p>
+        <p class="text-xl text-gray-600">Einblicke in umgesetzte KI- und Optimierungsprojekte</p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Project 1 -->
-        <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-          <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
-            <div class="text-white text-center">
-              <div class="text-4xl mb-2">🗺️</div>
-              <div class="text-sm opacity-90">Interactive Route Planning</div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-3">{{projects.0.title}}</h3>
-            <p class="text-gray-600 mb-4">{{projects.0.description}}</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">{{projects.0.technologies.0}}</span>
-              <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">{{projects.0.technologies.1}}</span>
-              <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">{{projects.0.technologies.2}}</span>
-            </div>
-            <a href="{{projects.0.url}}" target="_blank" rel="noopener noreferrer"
-              class="text-blue-600 hover:text-blue-800 font-semibold">
-              Projekt ansehen →
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-          <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
-            <div class="text-white text-center">
-              <div class="text-4xl mb-2">📊</div>
-              <div class="text-sm opacity-90">Analytics Dashboard</div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-3">{{projects.1.title}}</h3>
-            <p class="text-gray-600 mb-4">{{projects.1.description}}</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">{{projects.1.technologies.0}}</span>
-              <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">{{projects.1.technologies.1}}</span>
-              <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">{{projects.1.technologies.2}}</span>
-            </div>
-            <div class="text-gray-500 font-semibold">
-              Vertrauliches Kundenprojekt
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-          <div class="h-48 bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center">
-            <div class="text-white text-center">
-              <div class="text-4xl mb-2">🏭</div>
-              <div class="text-sm opacity-90">Production AI System</div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-3">{{projects.2.title}}</h3>
-            <p class="text-gray-600 mb-4">{{projects.2.description}}</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">{{projects.2.technologies.0}}</span>
-              <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">{{projects.2.technologies.1}}</span>
-              <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">{{projects.2.technologies.2}}</span>
-            </div>
-            <div class="text-gray-500 font-semibold">
-              Vertrauliches Kundenprojekt
-            </div>
-          </div>
-        </div>
+      <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Projects will be dynamically generated here -->
       </div>
     </div>
   </section>
@@ -128,10 +63,70 @@
       });
     }
 
+    // Generate projects dynamically
+    function generateProjects() {
+      const projectsGrid = document.getElementById('projects-grid');
+      if (!projectsGrid) return;
+
+      const projectsHTML = CONFIG.projects.map(project => {
+        const tagColorMap = {
+          'blue': 'bg-blue-100 text-blue-800',
+          'green': 'bg-green-100 text-green-800',
+          'purple': 'bg-purple-100 text-purple-800',
+          'red': 'bg-red-100 text-red-800',
+          'yellow': 'bg-yellow-100 text-yellow-800',
+          'gray': 'bg-gray-200 text-gray-800'
+        };
+
+        const tagClasses = tagColorMap[project.tagColor] || 'bg-gray-100 text-gray-800';
+        
+        const actionButton = project.actionType === 'demo' 
+          ? `<div class="text-center">
+              <a href="${project.demoUrl || '#'}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-${project.tagColor}-600 hover:bg-${project.tagColor}-700 text-white font-semibold rounded-lg transition-colors">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                </svg>
+                Demo
+              </a>
+            </div>`
+          : `<div class="text-center text-gray-500 font-semibold">
+              Vertrauliches Kundenprojekt
+            </div>`;
+
+        return `
+          <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex flex-col h-full">
+            <div class="h-48 relative bg-cover bg-center flex items-center justify-center" style="background-image: url('${project.image}');">
+              <div class="absolute inset-0 bg-gradient-to-br from-${project.gradientFrom} to-${project.gradientTo} opacity-80"></div>
+              <div class="text-white text-center relative z-10">
+                <div class="text-4xl mb-2">${project.icon}</div>
+                <div class="text-sm opacity-90">${project.category}</div>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-xl font-bold mb-3">${project.title}</h3>
+              <p class="text-gray-600 mb-4">${project.description}</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                ${project.technologies.map(tech => 
+                  `<span class="px-2 py-1 ${tagClasses} text-xs rounded">${tech}</span>`
+                ).join('')}
+              </div>
+              <div class="flex-1"></div>
+              ${actionButton}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      projectsGrid.innerHTML = projectsHTML;
+    }
+
     // Load components
     async function loadAllComponents() {
       // First process the page content
       processPageContent();
+
+      // Generate projects dynamically
+      generateProjects();
 
       // Then load components
       await Promise.all([

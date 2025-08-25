@@ -134,49 +134,73 @@ const CONFIG = {
 
   projects: [
     {
-      title: "Route Planning Application",
-      description: "Intelligente Routenoptimierung für Logistikunternehmen mit interaktiver Weboberfläche",
-      url: "https://jumper.streamlit.app",
-      image: "/assets/project-route-planning.png",
-      technologies: ["Python", "Streamlit", "Optimization"]
+      title: "E-Mail Klassifizierungssystem",
+      description: "KI-basiertes System zur automatischen E-Mail-Kategorisierung mit 29% Genauigkeitssteigerung, ersetzte kostspieligen Drittanbieter",
+      url: "#",
+      image: "/assets/projects/project-email-classification.png",
+      technologies: ["Generative AI", "NLP", "Machine Learning"],
+      icon: "",
+      category: "",
+      tagColor: "blue",
+      actionType: "confidential"
+    },
+    // {
+    //   title: "SRT-Untertitel Übersetzer",
+    //   description: "Entwicklung eines Untertitel-Übersetzers mit fortschrittlichem Prompt Engineering für präzise Übersetzung und Timing, 33% Produktivitätssteigerung",
+    //   url: "#",
+    //   image: "/assets/projects/project-subtitle-translator.png",
+    //   technologies: ["Generative AI", "Prompt Engineering", "NLP"],
+    //   icon: "📝",
+    //   category: "Translation AI",
+    //   tagColor: "green",
+    //   actionType: "demo",
+    //   demoUrl: "https://jpjj-srt-translator-app-hykvhc.streamlit.app/"
+    // },
+    {
+      title: "E-Commerce ETA Vorhersagemodell",
+      description: "Machine Learning Modell zur Vorhersage der geschätzten Ankunftszeit im E-Commerce, verbesserte Lieferversprechen bei engeren Zeitfenstern",
+      url: "#",
+      image: "/assets/projects/project-eta-prediction.png",
+      technologies: ["Machine Learning", "Predictive Analytics", "E-Commerce"],
+      icon: "",
+      category: "",
+      tagColor: "blue",
+      actionType: "confidential"
     },
     {
-      title: "Supply Chain Analytics",
-      description: "Dashboard für Echtzeit-Analyse von Logistikprozessen bei internationalen Versanddienstleistern",
+      title: "KI-Matching Plattform für Experten",
+      description: "Globale unternehmensweite Matching-Plattform für KI-Profis - wie 'Tinder für Datenexperten' zur Verbindung von Ingenieuren und Stakeholdern",
       url: "#",
-      image: "/assets/project-analytics.png",
-      technologies: ["Python", "Machine Learning", "Data Visualization"]
+      image: "/assets/projects/project-ai-matching.png",
+      technologies: ["Machine Learning", "Recommendation Systems", "Operations Research"],
+      icon: "",
+      category: "",
+      tagColor: "blue",
+      actionType: "confidential"
     },
     {
-      title: "Production Optimization",
-      description: "KI-basierte Produktionsplanung für Fertigungsunternehmen",
+      title: "Globales Luftfrachtnetzwerk-Simulation",
+      description: "Hochauflösende Simulationsmodellierung eines $1B+ globalen Luftfracht-Expressnetzes zur strategischen und operativen Optimierung",
       url: "#",
-      image: "/assets/project-production.png",
-      technologies: ["Operations Research", "AI", "Process Optimization"]
+      image: "/assets/projects/project-air-network.png",
+      technologies: ["Operations Research", "Simulation", "Network Optimization"],
+      icon: "",
+      category: "",
+      tagColor: "blue",
+      actionType: "confidential"
+    },
+    {
+      title: "Last-Mile Delivery Optimierung",
+      description: "Optimierte Routen- und Flottenplanung für die letzte Meile mit 8% Kosteneinsparung für große deutsche Automobilkunden unter Berücksichtigung von 3d-Beladungs-Simulation",
+      url: "#",
+      image: "/assets/projects/project-last-mile.png",
+      technologies: ["Routing Optimization", "Fleet Management", "Cost Reduction"],
+      icon: "",
+      category: "",
+      tagColor: "blue",
+      actionType: "confidential"
     }
   ],
-
-  testimonials: [
-    {
-      text: "JPJ Solutions hat unsere Logistikprozesse revolutioniert. Die entwickelte Routenoptimierung spart uns täglich mehrere Stunden und reduziert unsere Transportkosten um 15%.",
-      author: "Dr. Maria Schmidt",
-      company: "LogTech Solutions GmbH",
-      date: "März 2024"
-    },
-    {
-      text: "Die Zusammenarbeit war hervorragend. Jens-Peter versteht es, komplexe mathematische Konzepte in praktische Lösungen zu übersetzen.",
-      author: "Thomas Müller",
-      company: "Produktions AG",
-      date: "Februar 2024"
-    },
-    {
-      text: "Professionelle Beratung und erstklassige Umsetzung. Das KI-Dashboard gibt uns endlich die Transparenz, die wir für datenbasierte Entscheidungen brauchen.",
-      author: "Sarah Weber",
-      company: "Manufacturing Pro",
-      date: "Januar 2024"
-    }
-  ],
-
   faq: [
     {
       question: "Wie läuft die Zusammenarbeit ab?",
