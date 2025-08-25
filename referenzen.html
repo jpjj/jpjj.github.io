@@ -16,7 +16,7 @@
   <!-- Testimonials Section -->
   <section class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl font-bold text-center mb-12">Kundenstimmen</h1>
+      <h1 class="text-4xl font-bold text-center mb-12">Referenzen</h1>
 
       <div class="text-center mb-12">
         <p class="text-xl text-gray-600">Stimmen von Kunden und Wegbegleitern</p>
@@ -62,23 +62,41 @@
       const testimonialsHtml = CONFIG.testimonials.map(testimonial => `
         <a href="https://www.linkedin.com/in/jens-peter-joost/details/recommendations/" target="_blank" rel="noopener noreferrer" class="block">
           <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
-            <div class="flex items-start mb-4">
-              <div class="text-blue-600 text-4xl mr-3">"</div>
-              <p class="text-gray-700 italic">${testimonial.text}</p>
-            </div>
-            <div class="flex items-center justify-between mt-6">
+            <!-- Desktop Layout -->
+            <div class="hidden md:flex items-center justify-between mt-6">
               <div class="flex items-center">
-                <img src="${testimonial.profilePicture}" alt="${testimonial.author}" class="w-12 h-12 rounded-full mr-4 object-cover">
+                <img src="${testimonial.profilePicture}" alt="${testimonial.author}" class="w-24 h-24 rounded-full mr-4 object-cover">
                 <div>
                   <div class="font-semibold text-gray-900">${testimonial.author}</div>
                   <div class="text-sm text-gray-600">${testimonial.jobTitle}</div>
                   <div class="text-sm text-gray-500">${testimonial.company}</div>
                 </div>
               </div>
-              <div class="flex text-yellow-400 text-sm">
+              <div class="flex text-yellow-400 text-2xl">
                 ★★★★★
               </div>
             </div>
+            
+            <!-- Mobile Layout -->
+            <div class="md:hidden mt-6">
+              <div class="flex items-start space-x-4">
+                <img src="${testimonial.profilePicture}" alt="${testimonial.author}" class="w-20 h-20 rounded-full object-cover flex-shrink-0">
+                <div class="flex-1">
+                  <div class="flex text-yellow-400 text-2xl">
+                    ★★★★★
+                  </div>
+                  <div class="font-semibold text-gray-900">${testimonial.author}</div>
+                  <div class="text-sm text-gray-600">${testimonial.jobTitle}</div>
+                  <div class="text-sm text-gray-500">${testimonial.company}</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex items-start mb-4 mt-4">
+              <div class="text-blue-600 text-4xl mr-3">"</div>
+              <p class="text-gray-700 italic">${testimonial.text}</p>
+            </div>
+            
           </div>
         </a>
       `).join('');
