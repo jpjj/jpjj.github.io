@@ -82,8 +82,8 @@
         };
 
         const tagClasses = tagColorMap[project.tagColor] || 'bg-gray-100 text-gray-800';
-        
-        const actionButton = project.actionType === 'demo' 
+
+        const actionButton = project.actionType === 'demo'
           ? `<div class="text-center">
               <a href="${project.demoUrl || '#'}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-${project.tagColor}-600 hover:bg-${project.tagColor}-700 text-white font-semibold rounded-lg transition-colors">
                 <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -93,7 +93,7 @@
               </a>
             </div>`
           : `<div class="text-center text-gray-500 font-semibold">
-              Vertrauliches Kundenprojekt
+              
             </div>`;
 
         return `
@@ -109,9 +109,9 @@
               <h3 class="text-xl font-bold mb-3">${project.title}</h3>
               <p class="text-gray-600 mb-4">${project.description}</p>
               <div class="flex flex-wrap gap-2 mb-4">
-                ${project.technologies.map(tech => 
-                  `<span class="px-2 py-1 ${tagClasses} text-xs rounded">${tech}</span>`
-                ).join('')}
+                ${project.technologies.map(tech =>
+          `<span class="px-2 py-1 ${tagClasses} text-xs rounded">${tech}</span>`
+        ).join('')}
               </div>
               <div class="flex-1"></div>
               ${actionButton}
