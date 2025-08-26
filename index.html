@@ -36,10 +36,12 @@
   <div id="pain-point"></div>
   <!-- Part 3: Call to Action -->
   <div id="hero"></div>
-  <div id="trust-builder"></div>
+  <!-- <div id="trust-builder"></div> -->
   <div id="projekte"></div>
   <div id="referenzen"></div>
-  <div id="zusammenarbeit"></div>
+  <div id="projektablauf"></div>
+  <div id="techstack"></div>
+  <div id="faq"></div>
   <div id="cta"></div>
   <!-- <div id="experience"></div> -->
   <div id="footer"></div>
@@ -73,7 +75,7 @@
       componentDivs.forEach(div => {
         const componentId = div.id;
         // Skip non-component divs
-        if (['header', 'footer', 'cta', 'trust-builder', 'hero', 'pain-point', 'experience', 'projekte', 'referenzen', 'zusammenarbeit'].includes(componentId)) {
+        if (['header', 'footer', 'cta', 'trust-builder', 'hero', 'pain-point', 'experience', 'projekte', 'referenzen', 'projektablauf', 'techstack', 'faq'].includes(componentId)) {
           loadPromises.push(loadComponent(componentId, `components/${componentId}.html`));
         }
       });

@@ -179,7 +179,7 @@ const CONFIG = {
       actionType: "confidential"
     },
     {
-      title: "Globales Luftfrachtnetzwerk-Simulation",
+      title: "Globale Luftfracht-Simulation",
       description: "Hochauflösende Simulationsmodellierung eines $1B+ globalen Luftfracht-Expressnetzes zur strategischen und operativen Optimierung",
       url: "#",
       image: "/assets/projects/project-air-network.png",
