@@ -118,7 +118,18 @@ function generateProjects() {
             </div>
             <div class="p-6 flex-1 flex flex-col">
               <h3 class="text-xl font-bold mb-3">${project.title}</h3>
-              <p class="text-gray-600 mb-4">${project.description}</p>
+              <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                <ul class="space-y-2 text-blue-700">
+                  ${project.description.split('\n').map(line => 
+                    line.trim().startsWith('✓') ? 
+                    `<li class="flex items-start">
+                       <span class="text-blue-600 font-bold mr-2">✓</span>
+                       <span>${line.substring(1).trim()}</span>
+                     </li>` : 
+                     `<li>${line}</li>`
+                  ).join('')}
+                </ul>
+              </div>
               <div class="flex flex-wrap gap-2 mb-4">
                 ${project.technologies.map(tech =>
             `<span class="px-2 py-1 ${tagClasses} text-xs rounded">${tech}</span>`

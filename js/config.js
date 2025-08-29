@@ -135,7 +135,7 @@ const CONFIG = {
   projects: [
     {
       title: "E-Mail Klassifizierungssystem",
-      description: "KI-basiertes System zur automatischen E-Mail-Kategorisierung mit 29% Genauigkeitssteigerung, ersetzte kostspieligen Drittanbieter",
+      description: "✓ <strong>Automatische E-Mail-Kategorisierung</strong> mit ChatGPT - welche Email muss zu welcher Adresse?\n✓ <strong>29% Genauigkeitssteigerung</strong> gegenüber bisherigem System\n✓ <strong>Kostspieligen Drittanbieter</strong> erfolgreich ersetzt",
       url: "#",
       image: "/assets/projects/project-email-classification.jpg",
       technologies: ["Generative AI", "NLP", "Machine Learning"],
@@ -158,7 +158,7 @@ const CONFIG = {
     // },
     {
       title: "E-Commerce ETA Vorhersagemodell",
-      description: "Machine Learning Modell zur Vorhersage der geschätzten Ankunftszeit im E-Commerce, verbesserte Lieferversprechen bei engeren Zeitfenstern",
+      description: "✓ <strong>Machine Learning Modell</strong> für präzise Lieferzeitprognosen\n✓ <strong>Verbesserte Lieferversprechen</strong> mit engeren Zeitfenstern\n✓ <strong>Erhöhte Kundenzufriedenheit</strong> durch zuverlässige Vorhersagen\n✓ Integration in bestehende E-Commerce-Plattformen",
       url: "#",
       image: "/assets/projects/project-eta-prediction.jpg",
       technologies: ["Machine Learning", "Predictive Analytics", "E-Commerce"],
@@ -169,7 +169,7 @@ const CONFIG = {
     },
     {
       title: "KI-Matching Plattform für Experten",
-      description: "Globale unternehmensweite Matching-Plattform für KI-Profis - wie 'Tinder für Datenexperten' zur Verbindung von Ingenieuren und Stakeholdern",
+      description: "✓ <strong>Globale unternehmensweite Matching-Plattform</strong> für Stakeholder und Ingenieure\n✓ <strong>\"Tinder\" für Datenexperten</strong> - optimierte Projektteam-Zusammenstellung durch KI\n✓ <strong>Neue Synergien</strong> und ungeahnte Kollaborationen, die ohne das KI-Matching nicht zustande gekommen wären.",
       url: "#",
       image: "/assets/projects/project-ai-matching.jpg",
       technologies: ["Machine Learning", "Recommendation Systems", "Operations Research"],
@@ -180,7 +180,7 @@ const CONFIG = {
     },
     {
       title: "Globale Luftfracht-Simulation",
-      description: "Hochauflösende Simulationsmodellierung eines $1B+ globalen Luftfracht-Expressnetzes zur strategischen und operativen Optimierung",
+      description: "✓ <strong>Simulation</strong> eines <strong>$1B+</strong> globalen Luftfracht-Netzwerks\n✓ <strong>Strategische und operative Optimierung</strong> von Express-Services\n✓ <strong>Entscheidungsunterstützung</strong> für Kapazitätsplanung",
       url: "#",
       image: "/assets/projects/project-air-network.jpg",
       technologies: ["Operations Research", "Simulation", "Network Optimization"],
@@ -191,10 +191,10 @@ const CONFIG = {
     },
     {
       title: "Last-Mile Delivery Optimierung",
-      description: "Optimierte Routen- und Flottenplanung für die letzte Meile mit 8% Kosteneinsparung für große deutsche Automobilkunden unter Berücksichtigung von 3d-Beladungs-Simulation",
+      description: "✓ <strong>Optimierte Routen- und Flottenplanung</strong> für Last-Mile-Delivery\n✓ <strong>8% Kosteneinsparung</strong> für große deutsche Automobilkunden\n✓ <strong>3D-Beladungs-Simulation</strong> für maximale Effizienz",
       url: "#",
       image: "/assets/projects/project-last-mile.jpg",
-      technologies: ["Routing Optimization", "Fleet Management", "Cost Reduction"],
+      technologies: ["Routing Optimization", "Fleet Management", "3D Loading"],
       icon: "",
       category: "",
       tagColor: "blue",
